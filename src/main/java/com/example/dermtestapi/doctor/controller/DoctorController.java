@@ -20,7 +20,7 @@ public class DoctorController {
         return doctor != null ? ResponseEntity.ok(doctor) : ResponseEntity.notFound().build();
     }
 
-    @PostMapping("/save-doctor")
+    @PostMapping("/add-doctor")
     public ResponseEntity<String> addDoctor(@RequestBody Doctor doctor) {
         Doctor savedDoctor = doctorService.addDoctor(doctor);
 
