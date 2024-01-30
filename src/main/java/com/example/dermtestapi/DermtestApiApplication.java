@@ -22,9 +22,8 @@ public class DermtestApiApplication {
 
     @Bean
     ApplicationRunner applicationRunner(Environment environment) {
-        return args -> log.info((environmentProperty.equals("default") ?
-                "message from application.properties: " :
-                "message from application-" + environmentProperty + ".properties: ") +
+        return args -> log.info(
+                "message from application-" + environmentProperty + ".properties: " +
                 environment.getProperty("welcome.message"));
     }
 
