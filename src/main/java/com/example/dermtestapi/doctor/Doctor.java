@@ -17,6 +17,12 @@ public class Doctor {
     private String lastName;
     private String specialization;
 
-    protected  Doctor() {}
+    public Doctor() {}
+
+    public Doctor(String firstName, String lastName, String specialization) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.specialization = specialization;
+    }
 
 }

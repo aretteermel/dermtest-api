@@ -14,7 +14,7 @@ public class DoctorController {
     private DoctorService doctorService;
 
     @GetMapping("/doctor/{id}")
-    public ResponseEntity<Doctor> getDoctorById(@PathVariable("id") int id) {
+    public ResponseEntity<Doctor> getDoctorById(@PathVariable("id") Long id) {
         Doctor doctor = doctorService.getDoctorById(id);
 
         return doctor != null ? ResponseEntity.ok(doctor) : ResponseEntity.notFound().build();

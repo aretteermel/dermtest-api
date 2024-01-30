@@ -11,13 +11,8 @@ public class DoctorService {
     @Autowired
     private DoctorRepository doctorRepository;
 
-    @Autowired
-    public DoctorService(DoctorRepository doctorRepository) {
-        this.doctorRepository = doctorRepository;
-    }
-
-    public Doctor getDoctorById(int id){
-        return doctorRepository.getDoctorById(id);
+    public Doctor getDoctorById(Long id){
+        return doctorRepository.findById(id).orElse(null);
     }
 
     public Doctor addDoctor(Doctor doctor) {
