@@ -1,4 +1,4 @@
-SELECT 'CREATE DATABASE dermtest' WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'dermtest');
+CREATE DATABASE IF NOT EXISTS dermtest;
 GRANT ALL PRIVILEGES ON DATABASE "dermtest" to postgres;
 
 CREATE TABLE IF NOT EXISTS doctor (
